@@ -1,0 +1,19 @@
+<!--  Include art::Wrapper lines for objects that we would like to put  -->
+<!--  into the event -->
+<!--  Include the non-wrapper lines for all objects on the art::Wrapper --> 
+<!--  lines and for all objects that are data members of those objects.-->
+ 
+<lcgdict>
+  <class name="geoalgo::GeoAlgoException"    ClassVersion="10">
+   <version ClassVersion="10" checksum="194273490"/>
+  </class>
+  <class name="geoalgo::GeoAlgo" ClassVersion="10">
+   <version ClassVersion="10" checksum="2217531480"/>
+  </class>
+  <class name="geoalgo::GeoObjCollection" ClassVersion="10">
+   <version ClassVersion="10" checksum="368288482"/>
+  </class>
+  <class name="geoalgo::Vector"    ClassVersion="10">
+   <version ClassVersion="10" checksum="70356871"/>
+  </class>
+</lcgdict>
