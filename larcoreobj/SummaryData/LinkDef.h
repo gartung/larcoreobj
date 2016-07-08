@@ -10,11 +10,6 @@
 #pragma link off all functions;
 
 #pragma link C++ namespace sumdata+;
-#pragma link C++ class geoalgo::Vector+;
-#pragma link C++ class std::vector<geoalgo::Vector>+;
-#pragma link C++ class std::vector<std::vector<geoalgo::Vector> >+;
-#pragma link C++ class std::map<geoalgo::Vector,string>+;
-#pragma link C++ class geoalgo::Trajectory+;
 
 #pragma link C++ class sumdata::RunData+;
 #pragma link C++ class sumdata::POTSummary+;

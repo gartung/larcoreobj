@@ -6,12 +6,14 @@
 DICT  = larcoreobj_SimpleTypesAndConstantsDict
 SHLIB = liblarcoreobj_SimpleTypesAndConstants.so
 SOURCES = $(filter-out $(DICT).cxx, $(wildcard *.cxx))
-FMWK_HEADERS = LinkDef.h $(DICT).h
+FMWK_HEADERS = LinkDef.h $(DICT).h classes.h
 HEADERS = $(filter-out $(FMWK_HEADERS), $(wildcard *.h))
 OBJECTS = $(SOURCES:.cxx=.o)
 
 # include options for this package
 INCFLAGS  = -I.                       #Include itself
+
+#INCFLAGS  = $(LARLITE_USERDEVDIR)/larcoreobj/
 
 # platform-specific options
 OSNAME          = $(shell uname -s)

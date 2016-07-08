@@ -9,6 +9,8 @@
 #pragma link off all classes;
 #pragma link off all functions;
 
+
+
 #pragma link C++ namespace geo+;
 #pragma link C++ namespace details+;
 #pragma link C++ namespace util+;
