@@ -25,7 +25,6 @@ include $(LARLITE_BASEDIR)/Makefile/Makefile.${OSNAME}
 
 # set CINT flag
 CINTFLAGS += -p
-#LDFLAGS += -L$(LARLITE_LIBDIR) -llarcoreobj_SimpleTypesAndConstants
 
 # call the common GNUmakefile
 include $(LARLITE_BASEDIR)/Makefile/GNUmakefile.CORE
