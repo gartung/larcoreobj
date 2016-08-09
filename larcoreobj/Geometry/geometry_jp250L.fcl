@@ -1,0 +1,17 @@
+BEGIN_PROLOG
+
+jp250L_geo:
+{
+ SurfaceY:     1.0e2                   #in cm, vertical distance to the surface
+ Name:         "jp250l"
+ RelativePath: "Geometry/gdml/"
+ GDML:         "jp250L.gdml"
+ ROOT:         "jp250L.gdml"
+}
+
+jp250L_geometry_helper:
+{
+ service_provider : StandardGeometryHelper
+}
+
+END_PROLOG
