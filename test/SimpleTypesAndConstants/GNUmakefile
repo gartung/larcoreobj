@@ -3,8 +3,8 @@
 #
 
 # specific names for this package
-DICT  = larcoreobj_SimpleTypesAndConstantsTEST
-SHLIB = liblarcoreobj_SimpleTypesAndConstantsTEST.so
+DICT  = larcoreobj_SimpleTypesAndConstantsTestDict
+SHLIB = liblarcoreobj_SimpleTypesAndConstantsTestDict.so
 SOURCES = $(filter-out geo_types_test.cc $(DICT).cxx, $(wildcard *.cxx))
 FMWK_HEADERS = LinkDef.h $(DICT).h classes.h
 HEADERS = $(filter-out $(FMWK_HEADERS), $(wildcard *.h))
