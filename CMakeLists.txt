@@ -16,17 +16,11 @@
 # use cmake 3.3 or later
 cmake_minimum_required (VERSION 3.3)
 
-project(larcoreobj)
+project(larcoreobj VERSION 1.14.00)
 
-# cetbuildtools contains our cmake modules
-SET ( CETBUILDTOOLS_VERSION $ENV{CETBUILDTOOLS_VERSION} )
-IF (NOT CETBUILDTOOLS_VERSION)
-    MESSAGE (FATAL_ERROR "ERROR: setup cetbuildtools to get the cmake modules")
-ENDIF()
-
-set(CMAKE_MODULE_PATH $ENV{CANVAS_DIR}/Modules
-		      $ENV{CETBUILDTOOLS_DIR}/Modules
-		      ${CMAKE_MODULE_PATH})
+# cetmodules contains our cmake modules
+find_package(cetmodules REQUIRED)
+find_package(canvas REQUIRED)
 
 include(CetCMakeEnv)
 cet_cmake_env()
@@ -42,8 +36,12 @@ cet_report_compiler_flags()
 
 # these are minimum required versions, not the actual product versions
 find_ups_product( canvas )
-find_ups_product( cetbuildtools )
+find_ups_product(messagefacility)
+find_ups_product(fhiclcpp)
+find_ups_product(cetlib)
+find_ups_product(cetlib_except)
 find_ups_root( )
+find_ups_boost( )
 
 # macros for artdaq_dictionary and simple_plugin
 include(ArtDictionary)
