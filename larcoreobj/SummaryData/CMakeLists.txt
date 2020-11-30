@@ -1,6 +1,10 @@
-cet_make(NO_DICTIONARY) ### MIGRATE-ACTION-RECOMMENDED: use cet_make_library(), build_dictionary(), basic_plugin() with explicit source lists
+cet_make_library( 
+  SOURCE
+    POTSummary.cxx
+    RunData.cxx
+)
 
-art_dictionary(DICTIONARY_LIBRARIES larcoreobj_SummaryData)
+build_dictionary(DICTIONARY_LIBRARIES larcoreobj_SummaryData)
 
 add_subdirectory(SampledDicts)
 

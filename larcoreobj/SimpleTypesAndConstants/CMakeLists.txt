@@ -1,4 +1,6 @@
-cet_make() ### MIGRATE-ACTION-RECOMMENDED: use cet_make_library(), build_dictionary(), basic_plugin() with explicit source lists
+cet_make_library( SOURCE geo_types.cxx )
+
+build_dictionary()
 
 install_headers()
 install_source()

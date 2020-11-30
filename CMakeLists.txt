@@ -17,16 +17,6 @@ cmake_policy(SET CMP0096 NEW)
 find_package(cetmodules 2.05.03 REQUIRED)
 project(larcoreobj VERSION 09.00.00 LANGUAGES CXX)
 
-# cetbuildtools contains our cmake modules ### MIGRATE-ACTION-REQUIRED: remove
-SET ( CETBUILDTOOLS_VERSION $ENV{CETBUILDTOOLS_VERSION} ) ### MIGRATE-ACTION-REQUIRED: remove
-IF (NOT CETBUILDTOOLS_VERSION) ### MIGRATE-ACTION-REQUIRED: remove
-    MESSAGE (FATAL_ERROR "ERROR: setup cetbuildtools to get the cmake modules") ### MIGRATE-ACTION-REQUIRED: remove
-ENDIF()
-
-set(CMAKE_MODULE_PATH $ENV{CANVAS_ROOT_IO_DIR}/Modules ### MIGRATE-ACTION-REQUIRED: remove
-		      $ENV{CETBUILDTOOLS_DIR}/Modules ### MIGRATE-ACTION-REQUIRED: remove
-		      ${CMAKE_MODULE_PATH}) ### MIGRATE-ACTION-REQUIRED: remove
-
 include(CetCMakeEnv)
 cet_cmake_env()
 
@@ -39,8 +29,8 @@ cet_set_compiler_flags(DIAGS CAUTIOUS
 cet_report_compiler_flags(REPORT_THRESHOLD VERBOSE)
 
 # these are minimum required versions, not the actual product versions
-find_ups_product( canvas ) ### MIGRATE-ACTION-RECOMMENDED: use cet_find_package() with target semantics for linking
-find_ups_root()
+find_package( canvas REQUIRED )
+find_package( ROOT REQUIRED )
 
 # macros for artdaq_dictionary and simple_plugin
 include(ArtDictionary)
