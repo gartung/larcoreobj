@@ -1,4 +1,4 @@
-cet_make(NO_DICTIONARY)
+cet_make(NO_DICTIONARY) ### MIGRATE-ACTION-RECOMMENDED: use cet_make_library(), build_dictionary(), basic_plugin() with explicit source lists
 
 art_dictionary(DICTIONARY_LIBRARIES larcoreobj_SummaryData)
 
