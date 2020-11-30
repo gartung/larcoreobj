@@ -33,7 +33,7 @@ find_package( canvas REQUIRED )
 find_package( ROOT REQUIRED )
 
 # macros for artdaq_dictionary and simple_plugin
-include(ArtDictionary)
+include(BuildDictionary)
 include(CetMake)
 include(BasicPlugin)
 
