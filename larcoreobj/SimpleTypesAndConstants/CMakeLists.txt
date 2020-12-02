@@ -1,4 +1,6 @@
-cet_make_library( SOURCE geo_types.cxx )
+cet_make_library( 
+ LIBRARY_NAME larcoreobj_SimpleTypesAndConstants
+ SOURCE geo_types.cxx )
 
 build_dictionary()
 

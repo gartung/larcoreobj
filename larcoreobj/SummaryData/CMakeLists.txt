@@ -1,10 +1,10 @@
 cet_make_library( 
+  LIBRARY_NAME
+    larcoreobj_SummaryData
   SOURCE
     POTSummary.cxx
     RunData.cxx
 )
-
-build_dictionary(DICTIONARY_LIBRARIES larcoreobj_SummaryData)
 
 add_subdirectory(SampledDicts)
 
